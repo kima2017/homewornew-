@@ -1,3 +1,4 @@
+//Tnayin 1
 function getOddSum() {
 let gumar1 = 0;
 let numbers1 = [1, 3, 17, 12, 8, 7, 9, 9, 1 , 3, 12 , 15, 5];
@@ -9,6 +10,7 @@ for(let i = 0; i < numbers1.length; i++) {
 console.log(gumar1);
 }
 
+//Tnayin 2
 function getEvenProduct() {
     let gumarOdd = 1;
     let numbers2 = [1, 3, 17, 12, 8, 7, 9, 9, 1 , 3, 12 , 15, 5];
