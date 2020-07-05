@@ -1,40 +1,108 @@
-//Tnayin 1
-function getOddSum() {
-let gumar1 = 0;
-let numbers1 = [1, 3, 17, 12, 8, 7, 9, 9, 1 , 3, 12 , 15, 5];
-for(let i = 0; i < numbers1.length; i++) {
-    if(numbers1[i]%2!==0) {
-        gumar1 = gumar1 + numbers1[i];
+const l = console.log;
+let t = 1;
+let s = 1;
+let divs = document.querySelectorAll(".main");
+for(let i = 0; i<divs.length; i++) {
+    //divs[i].addEventListener("click", changeBackground);
+    divs[i].setAttribute("data-tox", t);
+    divs[i].setAttribute("data-syun", s);
+    s++;
+    if(s===7) {
+        s = 1;
+        t++;
     }
 }
-console.log(gumar1);
-}
 
-//Tnayin 2
-function getEvenProduct() {
-    let gumarOdd = 1;
-    let numbers2 = [1, 3, 17, 12, 8, 7, 9, 9, 1 , 3, 12 , 15, 5];
-    for(let i = 0; i < numbers2.length; i++) {
-        if(numbers2[i]%2===0) {
-            gumarOdd = gumarOdd * numbers2[i];
-        }
+//1 
+// let armat = Math.sqrt(divs.length);
+// for(let i=0; i<divs.length; i++) {
+//     let tox = Number(divs[i].getAttribute("data-tox"));
+//     let syun = Number(divs[i].getAttribute("data-syun"));
+//     if(tox + syun <= (armat + 1) && (tox + syun)%2===1)  {
+//         divs[i].style.background = "red";
+//     }
+// }
+
+//2 
+
+// let armat = Math.sqrt(divs.length);
+// for(let i=0; i<divs.length; i++) {
+//     let tox = Number(divs[i].getAttribute("data-tox"));
+//     let syun = Number(divs[i].getAttribute("data-syun"));
+//     if(tox + syun== (armat - 1) || tox + syun===(armat)) {
+//         divs[i].style.background = "red";
+//     }
+// }
+
+//3 
+
+// let armat = Math.sqrt(divs.length);
+// for(let i=0; i<divs.length; i++) {
+//     let tox = Number(divs[i].getAttribute("data-tox"));
+//     let syun = Number(divs[i].getAttribute("data-syun"));
+//     l(tox);
+//     l(syun);
+//     if( tox + syun== (armat +1) || tox + syun== (armat + 2) || tox + syun===armat || (tox + syun)%2==0 ) {
+//         divs[i].style.background = "red";
+//     }
+// }
+
+//4
+
+// let armat = Math.sqrt(divs.length);
+
+// for(let i=0; i<divs.length; i++) {
+//     let tox = Number(divs[i].getAttribute("data-tox"));
+//     let syun = Number(divs[i].getAttribute("data-syun"));
+//     if(tox + syun == armat+1 || tox <= syun) {
+//         divs[i].style.background = "red";
+//     }
+// }
+
+//5 
+
+// let armat = Math.sqrt(divs.length);
+
+// for(let i=0; i<divs.length; i++) {
+//     let tox = Number(divs[i].getAttribute("data-tox"));
+//     let syun = Number(divs[i].getAttribute("data-syun"));
+//     if(tox + syun == armat+1 || tox === syun && tox + syun != armat && tox + syun != armat+2) {
+//         divs[i].style.background = "red";
+//     }
+// }
+
+// 6 chi stacvum
+
+//7 
+
+// let armat = Math.sqrt(divs.length);
+
+// for(let i=0; i<divs.length; i++) {
+//     let tox = Number(divs[i].getAttribute("data-tox"));
+//     let syun = Number(divs[i].getAttribute("data-syun"));
+//     if(tox < syun && (tox!= 1 || syun !=armat) ) {
+//         divs[i].style.background = "red";
+//     }
+// }
+
+//8
+
+// let armat = Math.sqrt(divs.length);
+
+// for(let i=0; i<divs.length; i++) {
+//     let tox = Number(divs[i].getAttribute("data-tox"));
+//     let syun = Number(divs[i].getAttribute("data-syun"));
+//     if(tox!==1 ) {
+//         divs[i].style.background = "red";
+//     }
+let armat = Math.sqrt(divs.length);
+
+for(let i=0; i<divs.length; i++) {
+    let tox = Number(divs[i].getAttribute("data-tox"));
+    let syun = Number(divs[i].getAttribute("data-syun"));
+    if(tox===1 || syun===1 || (tox + syun!== armat+10) ){
+        divs[i].style.background = "red";
     }
-    console.log(gumarOdd);
 }
 
-//Հաշվել Զանգվածի 3-ին բաժանվող թվերի միջին թվաբանական (Գումար / քանակ)
 
-function getAvarage() {
-    let gumarThree = 0;
-    let avarage;
-    let newArray = [];
-    let numbers3 = [1, 3, 17, 12, 8, 7, 9, 9, 1 , 3, 12 , 15, 5];
-    for(let i = 0; i < numbers3.length; i++) {
-        if(numbers3[i]%3===0) {
-            newArray.push(numbers3[i]);
-            gumarThree = gumarThree + numbers3[i];
-            avarage = gumarThree / newArray.length;
-        }
-    }
-    console.log(avarage);
-}
