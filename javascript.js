@@ -1,108 +1,82 @@
 const l = console.log;
-let t = 1;
-let s = 1;
-let divs = document.querySelectorAll(".main");
-for(let i = 0; i<divs.length; i++) {
-    //divs[i].addEventListener("click", changeBackground);
-    divs[i].setAttribute("data-tox", t);
-    divs[i].setAttribute("data-syun", s);
-    s++;
-    if(s===7) {
-        s = 1;
-        t++;
-    }
-}
 
-//1 
-// let armat = Math.sqrt(divs.length);
-// for(let i=0; i<divs.length; i++) {
-//     let tox = Number(divs[i].getAttribute("data-tox"));
-//     let syun = Number(divs[i].getAttribute("data-syun"));
-//     if(tox + syun <= (armat + 1) && (tox + syun)%2===1)  {
-//         divs[i].style.background = "red";
+/* 1) Input դաշտում մուտքագրել թիվ (զանգվածի չափը) Button1 կոճակի քլիկի ժամանակ 
+Random տարբերակով կստեծվի մեր մուտքագրած թվի չափն ունեցող x զանգված։ Մեր
+ ֆունկցիան կստանա այդ զանգվածը ու նրա միջոցով կհաշվվի և մեր պատուհանի մեջ
+  կտպվի այդ զանգվածի մեծագույն և փոքրագույն տարրերի գումարը։ 0-100 */
+
+// arr1 = [];
+// let lenghArray = arr1.length;
+// function maximum() {
+//     lenghArray = document.getElementById("tiv1").value;
+//     for(let i = 1; i<=lenghArray; i++) {
+//       let randomNum = Math.floor(Math.random() * 100);
+//       arr1.push(randomNum);
+//       document.getElementById("p5").innerHTML = arr1;
 //     }
+//       let max = arr1[0];
+//       for(let i =1; i <=lenghArray; i++) {
+//         if(max < arr1[i]) {
+//           max = arr1[i];
+//         }
+//         document.getElementById("p1").innerHTML = max;
+//       }
+//       let min = arr1[0];
+//       for(let i =1; i <=lenghArray; i++) {
+//         if(min > arr1[i]) {
+//           min = arr1[i];
+//         }
+//         document.getElementById("p2").innerHTML = min;
+//       }
+//     let gumar = min + max;
+//     document.getElementById("p3").innerHTML = gumar;
 // }
 
-//2 
 
-// let armat = Math.sqrt(divs.length);
-// for(let i=0; i<divs.length; i++) {
-//     let tox = Number(divs[i].getAttribute("data-tox"));
-//     let syun = Number(divs[i].getAttribute("data-syun"));
-//     if(tox + syun== (armat - 1) || tox + syun===(armat)) {
-//         divs[i].style.background = "red";
+/* 2)
+Input դաշտում մուտքագրել թիվ (զանգվածի չափը) >Button2 կոճակի քլիկի 
+ժամանակ Random տարբերակով կստեծվի մեր մուտքագրած թվի չափն ունեցող
+ x զանգված։ Մեր ֆունկցիան կստանա այդ զանգվածը, տեղերով կփոխի մեծագույն 
+ և փոքրագույն տարրերը և կվերադարձնի ստացված զանգվածը։ */
+
+//  arr2 = [];
+//  let lenghArray2 = arr2.length;
+
+//  function gumar() {
+//   lenghArray2 = document.getElementById("tiv2").value;
+//   for(let i = 1; i<=lenghArray2; i++) {
+//     let randomNum1 = Math.floor(Math.random() * 100);
+//     arr2.push(randomNum1);
+//     document.getElementById("p6").innerHTML = arr2;
+//   }
+//   let max = arr2[0];
+//   for(let i = 1; i <= lenghArray2; i++) {
+//     if(max < arr2[i]) {
+//       max = arr2[i];
 //     }
+//     document.getElementById("p7").innerHTML = max;
+//   }
+//   let min = arr2[0];
+//   for(let i =1; i <=lenghArray2; i++) {
+//     if(min > arr2[i]) {
+//       min = arr2[i];
+//   }
+//   document.getElementById("p8").innerHTML = min;
+//   document.getElementById("p9").innerHTML = arr2;
+//   arr2 = arr2.split(min);
+//   document.getElementById("p10").innerHTML = arr2;
+//  }
 // }
+/* 3)
+Input դաշտում մուտքագրել տեքստ։ Button3 կոճակի քլիկի ժամանակ մեր
+ ֆունկցիան կստանա այդ տեքստը և կհաշվի, թե քանի բառ կա այդ տեքստում */
 
-//3 
 
-// let armat = Math.sqrt(divs.length);
-// for(let i=0; i<divs.length; i++) {
-//     let tox = Number(divs[i].getAttribute("data-tox"));
-//     let syun = Number(divs[i].getAttribute("data-syun"));
-//     l(tox);
-//     l(syun);
-//     if( tox + syun== (armat +1) || tox + syun== (armat + 2) || tox + syun===armat || (tox + syun)%2==0 ) {
-//         divs[i].style.background = "red";
-//     }
+// let arr = [];
+// function barer() {
+// let text1 = document.getElementById("tiv3").value;
+// arr = text1.split(" ");
+// l(arr);
+// l(arr.length);
 // }
-
-//4
-
-// let armat = Math.sqrt(divs.length);
-
-// for(let i=0; i<divs.length; i++) {
-//     let tox = Number(divs[i].getAttribute("data-tox"));
-//     let syun = Number(divs[i].getAttribute("data-syun"));
-//     if(tox + syun == armat+1 || tox <= syun) {
-//         divs[i].style.background = "red";
-//     }
-// }
-
-//5 
-
-// let armat = Math.sqrt(divs.length);
-
-// for(let i=0; i<divs.length; i++) {
-//     let tox = Number(divs[i].getAttribute("data-tox"));
-//     let syun = Number(divs[i].getAttribute("data-syun"));
-//     if(tox + syun == armat+1 || tox === syun && tox + syun != armat && tox + syun != armat+2) {
-//         divs[i].style.background = "red";
-//     }
-// }
-
-// 6 chi stacvum
-
-//7 
-
-// let armat = Math.sqrt(divs.length);
-
-// for(let i=0; i<divs.length; i++) {
-//     let tox = Number(divs[i].getAttribute("data-tox"));
-//     let syun = Number(divs[i].getAttribute("data-syun"));
-//     if(tox < syun && (tox!= 1 || syun !=armat) ) {
-//         divs[i].style.background = "red";
-//     }
-// }
-
-//8
-
-// let armat = Math.sqrt(divs.length);
-
-// for(let i=0; i<divs.length; i++) {
-//     let tox = Number(divs[i].getAttribute("data-tox"));
-//     let syun = Number(divs[i].getAttribute("data-syun"));
-//     if(tox!==1 ) {
-//         divs[i].style.background = "red";
-//     }
-let armat = Math.sqrt(divs.length);
-
-for(let i=0; i<divs.length; i++) {
-    let tox = Number(divs[i].getAttribute("data-tox"));
-    let syun = Number(divs[i].getAttribute("data-syun"));
-    if(tox===1 || syun===1 || (tox + syun!== armat+10) ){
-        divs[i].style.background = "red";
-    }
-}
-
 
